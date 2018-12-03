@@ -1,0 +1,52 @@
+{
+    "name": "jersak/lib-laravel-git-versioning",
+    "description": "Jersak | lib-laravel-git-versioning.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "knplabs/github-api": "^2.10",
+        "php-http/guzzle6-adapter": "^1.1"
+    },
+    "require-dev": {
+        "albertcht/lumen-testing": "0.*",
+        "codedungeon/phpunit-result-printer": "0.*",
+        "gears/class-finder": "^1.0",
+        "johnkary/phpunit-speedtrap": "^3.0",
+        "mockery/mockery": "^1.2",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "~7.0",
+        "squizlabs/php_codesniffer": "^3.1",
+        "wizaplace/phpunit-slicer": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jersak\\Versioning\\" : "src/"
+        },
+        "classmap": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jersak\\Tests\\Versioning\\": "tests/"
+        },
+        "classmap": [
+        ]
+    },
+    "scripts": {
+        "lint": [
+            "vendor/bin/phpcs -p --extensions=php --standard=ruleset.xml --error-severity=1 --warning-severity=0 --colors --tab-width=30 ./src"
+        ],
+        "tests": [
+            "vendor/bin/phpunit -d memory_limit=512M --colors=always",
+            "vendor/bin/phpcs -p --extensions=php --standard=ruleset.xml --error-severity=1 --warning-severity=0 --colors --tab-width=30 ./src"
+        ]
+    },
+    "config": {
+        "process-timeout": 20000,
+        "optimize-autoloader": true,
+        "preferred-install": "source",
+        "sort-packages": true
+    }
+}

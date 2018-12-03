@@ -1,0 +1,47 @@
+version: 2
+
+jobs:
+  build:
+    environment:
+      CC_TEST_REPORTER_ID: dc0c3240ab8d23e47c03dbb7b7940e881bfb8ef428b9f743dc76c67d630e927b
+
+    docker:
+      - image: digitaltownorg/circleci:latest
+        user: root
+
+    working_directory: ~/project
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - composer-v1-{{ checksum "composer.lock" }}
+
+      - run: composer install -n --prefer-dist
+
+      - save_cache:
+          key: composer-v1-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+
+      - run:
+          name: Setup Code Climate test-reporter
+          command: composer lint
+      
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
+      - run:
+            name: Project testing
+            command: |
+                ./cc-test-reporter before-build
+                composer tests
+                cp tests/_reports/clover.xml .
+                ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+
+      # - store_artifacts:
+      #     path: ~/project/storage/logs

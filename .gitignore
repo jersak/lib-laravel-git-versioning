@@ -1,0 +1,38 @@
+## Project enviroment
+.env
+
+
+## Project logs
+*.log
+/logs
+/log
+
+
+## Project testing
+/tests/_reports/*
+
+
+## Project storage
+/storage/*.key
+
+
+## Project public content
+/public/definition
+/public/hot
+/public/storage
+/public/uploads
+
+
+## VM related
+.vagrant/
+
+
+## Vendor/3rd party libs
+/node_modules
+/vendor
+
+
+## misc.
+/.idea
+/nbproject/*
+.DS_Store

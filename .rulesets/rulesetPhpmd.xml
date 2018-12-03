@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ruleset name="PHPMD rule set for a project" xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>Custom rules for a project</description>
+
+
+    <rule ref="rulesets/cleancode.xml">
+        <exclude name="StaticAccess" />
+    </rule>
+
+    <rule ref="rulesets/cleancode.xml/StaticAccess">
+        <properties>
+            <property name="exceptions" value="\Illuminate\Support\Facades\Log, \Illuminate\Support\Facades\Schema, \DB, \Validator, \Log, \Illuminate\Support\Facades\Storage, \Illuminate\Http\Request" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml" />
+    <rule ref="rulesets/controversial.xml" />
+    <rule ref="rulesets/design.xml" />
+
+    <rule ref="rulesets/naming.xml">
+        <exclude name="ShortMethodName" />
+    </rule>
+
+    <rule ref="rulesets/naming.xml/ShortMethodName">
+        <properties>
+            <property name="minimum" value="2" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/unusedcode.xml">
+        <exclude name="UnusedFormalParameter" />
+    </rule>
+
+</ruleset>

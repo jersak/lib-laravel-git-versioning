@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="Jersak.Laravel">
+    <description>
+        Ruleset for PHP projects using Laravel
+    </description>
+
+    <!-- Referencing PSR2 includes the whole PSR2 standard -->
+    <rule ref="PSR2" />
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>*/database/*</exclude-pattern>
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+</ruleset>
