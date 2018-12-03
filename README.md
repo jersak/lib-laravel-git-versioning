@@ -9,6 +9,13 @@ This package pulls versioning information from github through an artisan command
 
 # Installation
 
+**.env file**
+
+Set three new variables:
+- GITHUB_ORG_NAME: name of your organization or personal github account (eg: Jersak)
+- GITHUB_REPO_NAME: name of your repository (eg: lib-laravel-git-versioning)
+- GITHUB_TOKEN: Github access token. 'repo:status' permission should suffice.
+
 **composer.json**
 
     "require": {
@@ -35,3 +42,7 @@ This package pulls versioning information from github through an artisan command
 On the CLI, run:
 
     php artisan github:getversion -S <commit or version SHA>
+
+**What does it add?**
+
+A header to every request called 'X-App-Version' containing either the version of the application if a released version is being used (such as v0.1) or the SHA of the commit.
