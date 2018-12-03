@@ -50,7 +50,8 @@
         <env name="QUEUE_DRIVER" value="redis"/>
         <env name="TEST_DATASET_SIZE" value="500" />
         <env name="TEST_FEATURE_DATASET_SIZE" value="2" />
-        <env name="GITHUB_TOKEN" value="c28a26c23424fe2287d987ee19908a22d5b8988d" />
-        <env name="GITHUB_REPO_NAME" value="weather-api" />
+        <env name="GITHUB_TOKEN" value="ac5007a8e232eab32883293fc864cbaf6f917b95" />
+        <env name="GITHUB_ORG_NAME" value="Jersak" />
+        <env name="GITHUB_REPO_NAME" value="lib-laravel-git-versioning" />
     </php>
 </phpunit>

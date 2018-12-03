@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/23202b2306cf7398c403/maintainability)](https://codeclimate.com/repos/5bb54c844500f602860053ee/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/23202b2306cf7398c403/test_coverage)](https://codeclimate.com/repos/5bb54c844500f602860053ee/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0ef4424fdd1a44195d30/maintainability)](https://codeclimate.com/github/jersak/lib-laravel-git-versioning/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/0ef4424fdd1a44195d30/test_coverage)](https://codeclimate.com/github/jersak/lib-laravel-git-versioning/test_coverage)
 
 # lib-laravel-git-versioning
 
