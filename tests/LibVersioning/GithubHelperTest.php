@@ -9,9 +9,9 @@ class GithubHelperTest extends AbstractTestCase
     public function testRetrieveExistingTag()
     {
 
-        $tag = app('Jersak\Versioning\GithubHelper')->retrieveTag('d030cb895c17b45375adaa5aa904cb474fd0268f');
+        $tag = app('Jersak\Versioning\GithubHelper')->retrieveTag('2cba201257c56400a77b12b5b635da97629cd286');
 
-        $this->assertEquals($tag, 'v0.1.2');
+        $this->assertEquals($tag, '0.1');
     }
 
     public function testRetrieveNonExistingTag()

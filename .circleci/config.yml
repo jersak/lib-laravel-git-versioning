@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     environment:
-      CC_TEST_REPORTER_ID: dc0c3240ab8d23e47c03dbb7b7940e881bfb8ef428b9f743dc76c67d630e927b
+      CC_TEST_REPORTER_ID: 07c4faa71dd30accde99a5ce05a4b328c0c4606eeccdd9f8e8962df86e9b3184
 
     docker:
       - image: digitaltownorg/circleci:latest
